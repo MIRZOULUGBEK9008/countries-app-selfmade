@@ -1,7 +1,10 @@
-const elLoader = document.querySelector('.js-loader');
+import cssClassModifiers from "./css-class-modifiers.js";
+import loader from "./loader.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+// Loader
+window.onload = () => {
+  const { loadTimeout } = cssClassModifiers;
   setTimeout(() => {
-    elLoader.classList.add('loader-wrapper--none');
-  }, 800);
-});
+    loader(false);
+  }, loadTimeout);
+};
