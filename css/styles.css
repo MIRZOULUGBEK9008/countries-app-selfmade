@@ -1,12 +1,66 @@
 /* CUSTOM-PROPS */
 :root {
-  --black: #000;
+  /* Colors  */
   --white: #fff;
+  --black: #111517;
+  --body-gray: #fafafa;
+  --input-gray: #848484;
+  --details-white: var(--white);
+
+  /* Shadows  */
+  --card-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  --header-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  --action-inputs-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  --back-button-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+  --borders-button-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-/* FONT-FACE  */
+.dark {
+  --white: #2b3844;
+  --black: #fff;
+  --input-gray: var(--black);
+  --body-gray: #202c36;
+  --details-white: var(--body-gray);
+}
 
-/* LOADER  */
+/* Font-FacE  */
+@font-face {
+  font-family: "Nunito Sans 10pt";
+  src: url("../fonts/NunitoSans10pt-Light.woff2") format("woff2"),
+    url("../fonts/NunitoSans10pt-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans 10pt";
+  src: url("../fonts/NunitoSans10pt-ExtraBold.woff2") format("woff2"),
+    url("../fonts/NunitoSans10pt-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans 10pt";
+  src: url("../fonts/NunitoSans10pt-Regular.woff2") format("woff2"),
+    url("../fonts/NunitoSans10pt-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans 10pt";
+  src: url("../fonts/NunitoSans10pt-SemiBold.woff2") format("woff2"),
+    url("../fonts/NunitoSans10pt-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Loader  */
 .loader-wrapper {
   display: flex;
   align-items: center;
@@ -44,8 +98,7 @@
   }
 }
 
-
-/* GLOBAL-STYLES  */
+/* Global-styles  */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -65,9 +118,9 @@ body {
   height: 100%;
   background-color: var(--white);
   color: var(--black);
-  font-family: "Arial", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-family: "Nunito Sans 10pt", "Arial", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.1;
   padding: 0;
   margin: 0;
 }
@@ -77,16 +130,15 @@ img {
   height: auto;
 }
 
-
-/* FOCUS-STYLES  */
+/* Focus-styles  */
 *:focus {
   outline: 0.3rem dashed var(--black);
   outline-offset: 0.3rem;
 }
 
-/* CONTAINER  */
+/* Container  */
 .container {
-  max-width: 120rem;
+  max-width: 132rem;
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -94,8 +146,7 @@ img {
   margin-right: auto;
 }
 
-
-/* VISUALLY-HIDDEN  */
+/* Visually-hidden  */
 .visually-hidden {
   position: absolute;
   width: 0.1rem;
@@ -107,8 +158,7 @@ img {
   overflow: hidden;
 }
 
-
-/* MAIN-CONTENT  */
+/* Main-content  */
 .main-content {
   flex-grow: 1;
 }
