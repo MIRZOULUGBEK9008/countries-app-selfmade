@@ -67,6 +67,7 @@
           <div class="actions__search-input-wrapper">
             <input
               class="actions__search-input"
+              id="searchCountriesInput"
               type="search"
               placeholder="Search for a country…"
               required
@@ -88,8 +89,13 @@
           </div>
 
           <div class="actions__select-zone-wrapper">
-            <label class="actions__select-region" for="selectRegion">
-              <span class="actions__select-text">Filter by Region</span>
+            <label
+              class="actions__select-region"
+              for="selectRegionInputCheckbox"
+            >
+              <span class="actions__select-text" id="selectedRegion"
+                >Filter by Region</span
+              >
               <svg
                 class="actions__select-arrow"
                 width="12"
@@ -107,27 +113,45 @@
             </label>
             <input
               class="actions__select-region-checkbox visually-hidden"
-              id="selectRegion"
+              id="selectRegionInputCheckbox"
               type="checkbox"
             />
             <ul class="actions__region-list">
               <li class="actions__region-item">
-                <a class="actions__region" href="/all">All</a>
+                <a class="actions__region js-select-region" href="/all">All</a>
               </li>
               <li class="actions__region-item">
-                <a class="actions__region" href="/region/africa">Africa</a>
+                <a
+                  class="actions__region js-select-region"
+                  href="/region/africa"
+                  >Africa</a
+                >
               </li>
               <li class="actions__region-item">
-                <a class="actions__region" href="/region/america">America</a>
+                <a
+                  class="actions__region js-select-region"
+                  href="/region/america"
+                  >America</a
+                >
               </li>
               <li class="actions__region-item">
-                <a class="actions__region" href="/region/asia">Asia</a>
+                <a class="actions__region js-select-region" href="/region/asia"
+                  >Asia</a
+                >
               </li>
               <li class="actions__region-item">
-                <a class="actions__region" href="/region/europe">Europe</a>
+                <a
+                  class="actions__region js-select-region"
+                  href="/region/europe"
+                  >Europe</a
+                >
               </li>
               <li class="actions__region-item">
-                <a class="actions__region" href="/region/oceania">Oceania</a>
+                <a
+                  class="actions__region js-select-region"
+                  href="/region/oceania"
+                  >Oceania</a
+                >
               </li>
             </ul>
           </div>

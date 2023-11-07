@@ -94,15 +94,6 @@
   animation: rotation 2s linear infinite;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* Global-styles  */
 html {
   font-size: 62.5%;
@@ -161,6 +152,26 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--input-gray);
+  border-radius: 20px;
+  border: 0.4rem solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }
 
 /* Clears the ‘x’ from internet explorer */
@@ -363,7 +374,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .section-countries__countries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
   margin: 0;
   padding: 0;
   gap: 6rem;
@@ -377,6 +388,10 @@ input[type="search"]::-webkit-search-results-decoration {
   overflow: hidden;
   min-height: 33.6rem;
   background-color: var(--white);
+}
+
+.countries__item--none {
+  display: none;
 }
 
 .country__flag {
@@ -465,5 +480,15 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .section-countries__countries {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Keyframes */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
