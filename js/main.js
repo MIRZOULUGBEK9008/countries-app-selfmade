@@ -1,13 +1,16 @@
 import cssClassModifiers from "./css-class-modifiers.js";
+import getFullInfoOfCountry from "./get-full-info-of-country.js";
 import {
   elThemeSwitcherButton,
   elSearchCountriesInput,
   elSelectedRegion,
   elSelectRegion,
+  elBackButton,
 } from "./html-elements.js";
 import request from "./request.js";
 import searchCountries from "./search-countries.js";
 import themeSwitcher from "./theme-switcher.js";
+import uiUpdaterAbout from "./ui-updater-about.js";
 import uiUpdater from "./ui-updater.js";
 
 // Loader
@@ -38,3 +41,16 @@ elSelectRegion.forEach((region) => {
     request(href).then((res) => uiUpdater(res));
   };
 });
+
+// Get full info
+document.onclick = (e) => {
+  if (e.target.classList.contains("js-country-name-link")) {
+    e.preventDefault();
+    getFullInfoOfCountry(e.target);
+  }
+};
+
+// Back
+elBackButton.onclick = () => {
+  uiUpdaterAbout();
+};

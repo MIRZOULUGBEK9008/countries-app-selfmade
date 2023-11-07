@@ -63,7 +63,7 @@
     <section class="section-actions">
       <div class="section-actions__container container">
         <h2 class="visually-hidden">Actions</h2>
-        <div class="section-actions__actions actions">
+        <div class="section-actions__actions actions" id="actions">
           <div class="actions__search-input-wrapper">
             <input
               class="actions__search-input"
@@ -118,19 +118,17 @@
             />
             <ul class="actions__region-list">
               <li class="actions__region-item">
-                <a class="actions__region js-select-region" href="/all">All</a>
+                <a class="actions__region js-select-region" href="all">All</a>
               </li>
               <li class="actions__region-item">
-                <a
-                  class="actions__region js-select-region"
-                  href="/region/africa"
+                <a class="actions__region js-select-region" href="region/africa"
                   >Africa</a
                 >
               </li>
               <li class="actions__region-item">
                 <a
                   class="actions__region js-select-region"
-                  href="/region/america"
+                  href="region/america"
                   >America</a
                 >
               </li>
@@ -140,22 +138,41 @@
                 >
               </li>
               <li class="actions__region-item">
-                <a
-                  class="actions__region js-select-region"
-                  href="/region/europe"
+                <a class="actions__region js-select-region" href="region/europe"
                   >Europe</a
                 >
               </li>
               <li class="actions__region-item">
                 <a
                   class="actions__region js-select-region"
-                  href="/region/oceania"
+                  href="region/oceania"
                   >Oceania</a
                 >
               </li>
             </ul>
           </div>
         </div>
+        <button
+          class="section-actions__back-button back-button"
+          id="backButton"
+        >
+          <span class="back-button__inner">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="m6.464 4.107 1.179 1.179-3.89 3.889h14.85v1.65H3.753l3.89 3.889-1.179 1.179L.572 10l5.892-5.893z"
+                fill="var(--black)"
+              />
+            </svg>
+            <span class="back-button__text">Back</span>
+          </span>
+        </button>
       </div>
     </section>
 
@@ -174,10 +191,12 @@
     </main>
 
     <template id="countryTemplate">
-      <li class="countries__item country js-country">
+      <li class="countries__item country js-country-card">
         <img class="country__flag js-flag" src="" alt="" />
         <div class="country__info">
-          <h3 class="country__title js-country-name"></h3>
+          <a class="country__title-link js-country-name-link" href="">
+            <h3 class="country__title js-country-name"></h3>
+          </a>
           <dl class="country__description-list">
             <div class="country__term-description">
               <dt class="country__term">Population:</dt>

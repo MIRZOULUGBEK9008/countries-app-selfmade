@@ -6,7 +6,7 @@ const searchCountries = (value) => {
   const searchedElement = value.trim().toLowerCase();
   elCountries.forEach((country) => {
     const elCountryName = country.innerText.toLowerCase();
-    const elCard = country.parentElement.parentElement;
+    const elCard = country.closest(".js-country-card");
     if (elCountryName.includes(searchedElement)) {
       elCard.classList.remove(countriesItemNone);
     } else elCard.classList.add(countriesItemNone);

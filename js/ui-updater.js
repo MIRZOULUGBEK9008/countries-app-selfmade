@@ -14,6 +14,9 @@ const uiUpdater = (countries) => {
     }) => {
       const elCountryCard = elCountryTemplate.content.cloneNode(true);
       const elFlag = elCountryCard.querySelector(".js-flag");
+      const elCountryNameLink = elCountryCard.querySelector(
+        ".js-country-name-link"
+      );
       const elCountryName = elCountryCard.querySelector(".js-country-name");
       const elPopulation = elCountryCard.querySelector(".js-population");
       const elRegion = elCountryCard.querySelector(".js-region");
@@ -22,6 +25,8 @@ const uiUpdater = (countries) => {
       // Set
       elFlag.alt = alt;
       elFlag.src = png;
+
+      elCountryNameLink.href = `name/${common}`;
 
       elCountryName.innerText = common;
 
