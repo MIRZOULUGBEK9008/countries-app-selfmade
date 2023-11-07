@@ -59,6 +59,82 @@
       </div>
     </header>
 
+    <!-- Section actions -->
+    <section class="section-actions">
+      <div class="section-actions__container container">
+        <h2 class="visually-hidden">Actions</h2>
+        <div class="section-actions__actions actions">
+          <div class="actions__search-input-wrapper">
+            <input
+              class="actions__search-input"
+              type="search"
+              placeholder="Search for a country…"
+              required
+            />
+            <svg
+              class="actions__search-icon"
+              width="18"
+              height="18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.5 11h-.8l-.3-.3c1-1.1 1.6-2.6 1.6-4.2C13 2.9 10.1 0 6.5 0S0 2.9 0 6.5 2.9 13 6.5 13c1.6 0 3.1-.6 4.2-1.6l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0C4 11 2 9 2 6.5S4 2 6.5 2 11 4 11 6.5 9 11 6.5 11z"
+                fill="var(--input-gray)"
+              />
+            </svg>
+          </div>
+
+          <div class="actions__select-zone-wrapper">
+            <label class="actions__select-region" for="selectRegion">
+              <span class="actions__select-text">Filter by Region</span>
+              <svg
+                class="actions__select-arrow"
+                width="12"
+                height="12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.45 3.45 6 6.9 2.55 3.45 1.5 4.5 6 9l4.5-4.5-1.05-1.05z"
+                  fill="var(--black)"
+                />
+              </svg>
+            </label>
+            <input
+              class="actions__select-region-checkbox visually-hidden"
+              id="selectRegion"
+              type="checkbox"
+            />
+            <ul class="actions__region-list">
+              <li class="actions__region-item">
+                <a class="actions__region" href="/all">All</a>
+              </li>
+              <li class="actions__region-item">
+                <a class="actions__region" href="/region/africa">Africa</a>
+              </li>
+              <li class="actions__region-item">
+                <a class="actions__region" href="/region/america">America</a>
+              </li>
+              <li class="actions__region-item">
+                <a class="actions__region" href="/region/asia">Asia</a>
+              </li>
+              <li class="actions__region-item">
+                <a class="actions__region" href="/region/europe">Europe</a>
+              </li>
+              <li class="actions__region-item">
+                <a class="actions__region" href="/region/oceania">Oceania</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
