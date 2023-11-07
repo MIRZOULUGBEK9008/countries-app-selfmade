@@ -9,7 +9,6 @@ const bordersManager = ({ target }) => {
       alert(message);
       location.reload();
     });
-  console.log(href);
 };
 
 export default bordersManager;
