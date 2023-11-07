@@ -10,7 +10,7 @@ import {
 import request from "./request.js";
 import searchCountries from "./search-countries.js";
 import themeSwitcher from "./theme-switcher.js";
-import uiUpdaterAbout from "./ui-updater-about.js";
+import uiCleanerAbout from "./ui-cleaner-about.js";
 import uiUpdater from "./ui-updater.js";
 
 // Loader
@@ -52,5 +52,5 @@ document.onclick = (e) => {
 
 // Back
 elBackButton.onclick = () => {
-  uiUpdaterAbout();
+  uiCleanerAbout();
 };
