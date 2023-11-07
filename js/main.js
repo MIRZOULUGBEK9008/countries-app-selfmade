@@ -8,6 +8,7 @@ import {
   elBackButton,
   elActions,
   elCountries,
+  elFullInfo,
 } from "./html-elements.js";
 import request from "./request.js";
 import searchCountries from "./search-countries.js";
@@ -68,8 +69,10 @@ elBackButton.onclick = () => {
     sectionActionsBlockButtonBlock,
     sectionActionsActionsNone,
     sectionCountriesCountriesNone,
+    sectionCountryFullInfoBlock,
   } = cssClassModifiers;
   elBackButton.classList.remove(sectionActionsBlockButtonBlock);
   elActions.classList.remove(sectionActionsActionsNone);
   elCountries.classList.remove(sectionCountriesCountriesNone);
+  elFullInfo.classList.remove(sectionCountryFullInfoBlock);
 };
