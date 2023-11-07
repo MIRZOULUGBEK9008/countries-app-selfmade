@@ -363,11 +363,60 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .section-countries__countries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(26.4rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   margin: 0;
   padding: 0;
+  gap: 6rem;
   list-style: none;
   background-color: var(--body-gray);
+}
+
+.countries__item {
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  min-height: 33.6rem;
+  background-color: var(--white);
+}
+
+.country__flag {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  height: 17rem;
+  width: 100%;
+}
+
+.country__info {
+  padding: 2.4rem;
+}
+
+.country__title {
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.country__description-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.country__term-description {
+  display: flex;
+  align-items: center;
+}
+
+.country__term {
+  font-weight: 600;
+}
+
+.country__detail {
+  margin: 0 0 0 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* Media  */
@@ -412,5 +461,9 @@ input[type="search"]::-webkit-search-results-decoration {
 @media only screen and (max-width: 320px) {
   .theme-switcher__text {
     display: none;
+  }
+
+  .section-countries__countries {
+    grid-template-columns: 1fr;
   }
 }
