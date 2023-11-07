@@ -388,6 +388,7 @@ input[type="search"]::-webkit-search-results-decoration {
   overflow: hidden;
   min-height: 33.6rem;
   background-color: var(--white);
+  cursor: pointer;
 }
 
 .countries__item--none {

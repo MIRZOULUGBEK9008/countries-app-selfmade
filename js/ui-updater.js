@@ -29,7 +29,7 @@ const uiUpdater = (countries) => {
 
       elRegion.innerText = region;
 
-      elCapital.innerText = capital;
+      elCapital.innerText = capital ? capital : "No capital";
 
       fragment.appendChild(elCountryCard);
     }
