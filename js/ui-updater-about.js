@@ -45,7 +45,7 @@ const uiUpdaterAbout = ([fullInfo]) => {
   elFullInfoRegion.innerText = region;
   elFullInfoSubRegion.innerText = subregion;
   elFullInfoCapital.innerText = capital ? capital : "No capital";
-  elFullInfoTopLevelDomain.innerText = tld;
+  elFullInfoTopLevelDomain.innerText = tld ? tld : "No TLD";
   elFullInfoCurrencies.innerText = currencies
     ? Object.values(currencies).map(({ name }) => name)
     : "No currencies";
