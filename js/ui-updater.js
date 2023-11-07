@@ -30,7 +30,7 @@ const uiUpdater = (countries) => {
 
       elCountryName.innerText = common;
 
-      elPopulation.innerText = population.toLocaleString();
+      elPopulation.innerText = population.toLocaleString("en-US");
 
       elRegion.innerText = region;
 
