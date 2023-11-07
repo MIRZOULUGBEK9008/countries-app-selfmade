@@ -43,7 +43,7 @@ const uiUpdaterAbout = ([fullInfo]) => {
   elFullInfoNativeName.innerText = nativeName
     ? Object.values(nativeName).map(({ common }, index) => index < 2 && common)
     : "No native name";
-  elFullInfoPopulation.innerText = population.toLocaleString();
+  elFullInfoPopulation.innerText = population.toLocaleString("en-US");
   elFullInfoRegion.innerText = region;
   elFullInfoSubRegion.innerText = subregion;
   elFullInfoCapital.innerText = capital ? capital : "No capital";

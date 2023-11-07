@@ -216,7 +216,6 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--black);
   margin: 0;
   font-size: 2.4rem;
-  font-size: 900;
   white-space: nowrap;
 }
 
@@ -244,7 +243,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .theme-switcher__text {
   font-size: 1.6rem;
-  font-size: 600;
+  font-weight: 600;
   text-transform: capitalize;
   margin-left: 0.8rem;
   color: var(--black);
