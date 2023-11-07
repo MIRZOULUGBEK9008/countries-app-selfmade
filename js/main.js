@@ -6,6 +6,8 @@ import {
   elSelectedRegion,
   elSelectRegion,
   elBackButton,
+  elActions,
+  elCountries,
 } from "./html-elements.js";
 import request from "./request.js";
 import searchCountries from "./search-countries.js";
@@ -24,7 +26,12 @@ window.onload = () => {
 elThemeSwitcherButton.onclick = () => themeSwitcher();
 
 // Request and send data to uiUpdater
-request().then((res) => uiUpdater(res));
+request()
+  .then((res) => uiUpdater(res))
+  .catch(({ message }) => {
+    alert(message);
+    location.reload();
+  });
 
 // Search countries
 elSearchCountriesInput.oninput = ({ target: { value } }) => {
@@ -38,7 +45,12 @@ elSelectRegion.forEach((region) => {
     elSelectedRegion.innerText = region.innerText;
     elSelectedRegion.click();
     const href = region.getAttribute("href");
-    request(href).then((res) => uiUpdater(res));
+    request(href)
+      .then((res) => uiUpdater(res))
+      .catch(({ message }) => {
+        alert(message);
+        location.reload();
+      });
   };
 });
 
@@ -52,5 +64,12 @@ document.onclick = (e) => {
 
 // Back
 elBackButton.onclick = () => {
-  uiCleanerAbout();
+  const {
+    sectionActionsBlockButtonBlock,
+    sectionActionsActionsNone,
+    sectionCountriesCountriesNone,
+  } = cssClassModifiers;
+  elBackButton.classList.remove(sectionActionsBlockButtonBlock);
+  elActions.classList.remove(sectionActionsActionsNone);
+  elCountries.classList.remove(sectionCountriesCountriesNone);
 };

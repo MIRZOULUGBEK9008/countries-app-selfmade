@@ -502,6 +502,16 @@ input[type="search"]::-webkit-search-results-decoration {
   text-overflow: ellipsis;
 }
 
+/* Full info */
+.section-country-full-info {
+  display: none;
+}
+
+.section-country-full-info--block {
+  display: block;
+  background-color: var(--body-gray);
+}
+
 /* Media  */
 /* Responsive ==> 800 */
 @media only screen and (max-width: 800px) {

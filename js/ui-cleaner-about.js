@@ -1,15 +1,24 @@
 import cssClassModifiers from "./css-class-modifiers.js";
-import { elActions, elBackButton, elCountries } from "./html-elements.js";
+import {
+  elActions,
+  elBackButton,
+  elBorders,
+  elCountries,
+  elFullInfo,
+} from "./html-elements.js";
 
-const uiCleanerAbout = () => {
+const uiCleanerAbout = (value) => {
   const {
+    sectionCountryFullInfoBlock,
     sectionActionsBlockButtonBlock,
     sectionActionsActionsNone,
     sectionCountriesCountriesNone,
   } = cssClassModifiers;
-  elBackButton.classList.toggle(sectionActionsBlockButtonBlock);
-  elActions.classList.toggle(sectionActionsActionsNone);
-  elCountries.classList.toggle(sectionCountriesCountriesNone);
+  elFullInfo.classList.add(sectionCountryFullInfoBlock);
+  elBackButton.classList.add(sectionActionsBlockButtonBlock);
+  elActions.classList.add(sectionActionsActionsNone);
+  elCountries.classList.add(sectionCountriesCountriesNone);
+  elBorders.innerHTML = null;
 };
 
 export default uiCleanerAbout;

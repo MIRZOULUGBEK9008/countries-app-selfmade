@@ -5,6 +5,9 @@ const cssClassModifiers = {
   sectionActionsActionsNone: "section-actions__actions--none",
   sectionCountriesCountriesNone: "section-countries__countries--none",
   countriesItemNone: "countries__item--none",
+
+  // Full Info
+  sectionCountryFullInfoBlock: "section-country-full-info--block",
   loadTimeout: 700,
 };
 

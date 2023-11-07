@@ -189,10 +189,17 @@
             id="countries"
           ></ul>
 
-          <section class="section-country-full-info">
+          <section class="section-country-full-info" id="fullInfo">
             <h2 class="visually-hidden">Country Full Info</h2>
-            <div class="section-country-full-info__inner" id="fullInfo">
-              <img id="fullInfoFlag" src="" alt="" width="560" height="401" />
+            <div class="section-country-full-info__inner">
+              <img
+                class="section-country-full-info__flag"
+                id="fullInfoFlag"
+                src=""
+                alt=""
+                width="560"
+                height="401"
+              />
               <div class="section-country-full-info__content full-content">
                 <h2 class="full-content__title" id="fullInfoCountryName"></h2>
                 <div class="full-content__info">
@@ -260,7 +267,7 @@
 
                 <!-- Borders  -->
                 <div class="full-content__borders borders">
-                  <h3 class="borders__title">Border countries</h3>
+                  <h3 class="borders__title">Border countries:</h3>
                   <ul class="borders__list" id="borders"></ul>
                 </div>
               </div>

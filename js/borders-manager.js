@@ -1,16 +1,15 @@
 import request from "./request.js";
 import uiUpdaterAbout from "./ui-updater-about.js";
 
-const getFullInfoOfCountry = (target) => {
+const bordersManager = ({ target }) => {
   const href = target.getAttribute("href");
   request(href)
-    .then((res) => {
-      uiUpdaterAbout(res);
-    })
+    .then((res) => uiUpdaterAbout(res))
     .catch(({ message }) => {
       alert(message);
       location.reload();
     });
+  console.log(href);
 };
 
-export default getFullInfoOfCountry;
+export default bordersManager;
