@@ -75,4 +75,5 @@ elBackButton.onclick = () => {
   elActions.classList.remove(sectionActionsActionsNone);
   elCountries.classList.remove(sectionCountriesCountriesNone);
   elFullInfo.classList.remove(sectionCountryFullInfoBlock);
+  document.title = "Countries";
 };

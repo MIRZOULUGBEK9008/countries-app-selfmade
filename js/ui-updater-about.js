@@ -38,6 +38,8 @@ const uiUpdaterAbout = ([fullInfo]) => {
 
   elFullInfoCountryName.innerText = common;
 
+  document.title = common;
+
   elFullInfoNativeName.innerText = nativeName
     ? Object.values(nativeName).map(({ common }) => common)
     : "No native name";
