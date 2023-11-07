@@ -41,7 +41,7 @@ const uiUpdaterAbout = ([fullInfo]) => {
   document.title = common;
 
   elFullInfoNativeName.innerText = nativeName
-    ? Object.values(nativeName).map(({ common }) => common)
+    ? Object.values(nativeName).map(({ common }, index) => index < 2 && common)
     : "No native name";
   elFullInfoPopulation.innerText = population.toLocaleString();
   elFullInfoRegion.innerText = region;
@@ -49,10 +49,10 @@ const uiUpdaterAbout = ([fullInfo]) => {
   elFullInfoCapital.innerText = capital ? capital : "No capital";
   elFullInfoTopLevelDomain.innerText = tld ? tld : "No TLD";
   elFullInfoCurrencies.innerText = currencies
-    ? Object.values(currencies).map(({ name }) => name)
+    ? Object.values(currencies).map(({ name }, index) => index < 2 && name)
     : "No currencies";
   elFullInfoLanguages.innerText = languages
-    ? Object.values(languages).map((lang) => lang)
+    ? Object.values(languages).map((lang, index) => index < 2 && lang)
     : "No languages";
 
   if (borders) {
