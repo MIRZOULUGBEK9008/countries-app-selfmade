@@ -135,6 +135,43 @@
       </div>
     </section>
 
+    <main class="main-content">
+      <!-- Section-countries  -->
+      <section class="section-countries">
+        <div class="section-countries__container container">
+          <h2 class="visually-hidden">Countries</h2>
+          <span class="section-countries__no-data">No data</span>
+          <ul
+            class="section-countries__countries countries"
+            id="countries"
+          ></ul>
+        </div>
+      </section>
+    </main>
+
+    <template id="countryTemplate">
+      <li class="countries__item country js-country">
+        <img class="country__flag js-flag" src="" alt="" />
+        <div class="country__info">
+          <h3 class="country__title js-title"></h3>
+          <dl class="country__description-list">
+            <div class="country__term-description">
+              <dt class="country__term">Population:</dt>
+              <dd class="country__detail js-population"></dd>
+            </div>
+            <div class="country__term-description">
+              <dt class="country__term">Region:</dt>
+              <dd class="country__detail js-region"></dd>
+            </div>
+            <div class="country__term-description">
+              <dt class="country__term">Capital:</dt>
+              <dd class="country__detail js-capital"></dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+    </template>
+
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
